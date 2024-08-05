@@ -1,2 +1,16 @@
-# lazybug
+* lazybug
 A growing bug
+
+
+* Build
+#+begin_src bash
+
+#!/usr/bin/env sh
+
+OUTDIR=Debug
+rm ${OUTDIR} -rf
+cmake -B ${OUTDIR}
+cmake --build ${OUTDIR} -j
+cmake --build ${OUTDIR} --target flash -j
+
+#+end_src
